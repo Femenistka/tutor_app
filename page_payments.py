@@ -34,8 +34,8 @@ def render():
         st.session_state.pay_method = pm_default
         st.session_state.pay_prev_name = name
 
-    with st.form("pay_form", clear_on_submit=True):
-        price = st.number_input("Сумма", min_value=0.0, step=1.0, key="pay_price")
+    with st.form("pay_form", clear_on_submit=False):
+        price = st.number_input("Сумма", min_value=0.0, step=5.0, key="pay_price")
 
         pay_method = st.selectbox(
             "Способ оплаты",

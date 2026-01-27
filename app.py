@@ -18,7 +18,7 @@ st.markdown("""
 section[data-testid="stSidebar"] .stButton>button {
   width: 100%;
   border-radius: 12px;
-  padding: 0.6rem 0.8rem;
+  padding: 0.8rem 0.8rem;
   font-size: 0.95rem;
 }
 section[data-testid="stSidebar"] hr {
@@ -45,7 +45,6 @@ def sidebar_nav():
     nav_button("💳 Пополнения", "payments")
     nav_button("🔢 Баланс", "finance")
     nav_button("👥 Ученики", "students")
-
     st.sidebar.divider()
 
     nav_button("📊 Аналитика", "Analytics")

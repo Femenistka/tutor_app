@@ -33,8 +33,8 @@ def render():
         st.session_state.lesson_price = default_price
         st.session_state.lesson_prev_name = name
 
-    with st.form("lesson_form", clear_on_submit=True):
-        price = st.number_input("Цена", min_value=0.0, step=1.0, key="lesson_price")
+    with st.form("lesson_form", clear_on_submit=False):
+        price = st.number_input("Цена", min_value=0.0, step=5.0, key="lesson_price")
         d = st.date_input("Дата", value=date.today())
         comment = st.text_input("Комментарий (необяз.)")
         ok = st.form_submit_button("Сохранить", type="primary")
