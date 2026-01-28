@@ -4,8 +4,8 @@ from sqlalchemy import text
 
 
 def _conn():
-    url = st.secrets["connections"]["postgresql"]["url"]
-    return st.connection("postgresql", type="sql", url=url)
+    return st.connection("postgresql", type="sql")
+
 
 
 
