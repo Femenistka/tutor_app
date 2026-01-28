@@ -32,9 +32,8 @@ def init_db():
                 pay_method TEXT NOT NULL DEFAULT 'card'
             );
         """))
-
-        s.execute(text("ALTER TABLE payments ADD COLUMN IF NOT EXISTS pay_method TEXT NOT NULL DEFAULT 'card';"))
         s.commit()
+
 
 
 def add_lesson(name: str, price: float, date: str, comment: str | None = None):
